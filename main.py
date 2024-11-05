@@ -1,12 +1,18 @@
-import math
-print ("Exercise 2 area of equilateral triangles")
+print ("Exercise 3 Voltages")
+print ("Please, Enter different voltages")
+volt1 = int(input("Enter voltage: "))
+volt2 = int(input("Enter voltage: "))
+volt3 = int(input("Enter voltage: "))
 
-lado1 = float(input("enter side A of the equilateral triangle: "))
+prom = (volt1+volt2+volt3)/3
 
-area = ((1.7320)/4)* math.pow(lado1, 2)
-
-if area < 1000:
-    print (f"The area of the triangle is: {area} cm")
+if volt1 != volt2 and volt1 != volt3 and volt2 !=volt3:
+    if prom < 115:
+        print (f"CORRECT VOLTAGE {prom}")
+    elif prom >115 and prom < 220:
+        print (f"CORRECT VOLTAGE {prom}")
+    else:
+        print (f"DANGEROUS {prom}")
 else:
-    print ("INVALID DATA")
+    print ("Please, enter different voltages")
     
